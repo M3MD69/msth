@@ -1,0 +1,278 @@
+:root {
+    --primary-color: #5E091A;
+    --secondary-color: #F4869C;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    direction: rtl;
+    color: var(--secondary-color);
+    transition: 0.3s all;
+    flex-wrap: wrap;
+    scroll-behavior: smooth;
+    transition: 0.3s all;
+    cursor: default;
+    font-family: 'Cairo', sans-serif;
+    text-align: center;
+
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+::-webkit-scrollbar {
+    width: 0.5rem;
+}
+
+::-webkit-scrollbar-track {
+    border: 0.5em solid var(--primary-color);
+    box-shadow: inset 0 0 1px 1px var(--secondary-color);
+    border-radius: 0.5rem;
+}
+
+::-webkit-scrollbar-thumb {
+    background: linear-gradient(0deg, var(--secondary-color), var(--secondary-color));
+    border-radius: 0.5rem;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: linear-gradient(0deg, var(--primary-color), var(--secondary-color), var(--primary-color));
+}
+
+body {
+    background-color: var(--primary-color);
+}
+
+.headerDiv {
+    position: fixed;
+    top: 0%;
+    right: 0%;
+    left: 0%;
+    background-color: var(--primary-color);
+}
+
+.firstName {
+    float: right;
+    display: inline;
+    margin: 0.5em;
+    cursor: pointer;
+}
+
+#Light,
+#Dark {
+    float: left;
+    margin: 0.5em;
+    cursor: pointer;
+    width: 1.5em;
+    height: 1.5em;
+}
+
+#Dark {
+    display: none;
+}
+
+.hr {
+    margin-top: 16em;
+    margin-bottom: 7em;
+    opacity: 0;
+}
+
+.hr1 {
+    margin-bottom: 7em;
+    opacity: 0;
+}
+
+.firstAboutDiv h1:first-child,
+.BoxesAbilties h3:first-child,
+.BoxesServices h3:first-child {
+    margin-bottom: 1.5em;
+}
+
+.buttonTopDiv {
+    margin: 2em;
+}
+
+.button {
+    display: inline;
+    border: 2px solid var(--secondary-color);
+    border-radius: 0.5em;
+    background-color: var(--secondary-color);
+    color: var(--primary-color);
+    font-weight: bold;
+    padding: 0.7em;
+    font-size: smaller;
+    cursor: pointer;
+    margin: 0.35em;
+}
+
+.button:hover {
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+}
+
+.buttonTopDiv p:nth-child(2) {
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+    cursor: pointer;
+}
+
+.secondAboutDiv h5,
+.abiltiesDiv h5,
+.servicesDiv h5 {
+    margin-bottom: 0.5em;
+}
+
+.secondAboutBoxesDiv,
+.abiltiesBoxesDiv,
+.servicesBoxesDiv {
+    display: flex;
+    flex: auto;
+}
+
+.Boxes,
+.BoxesAbilties,
+.BoxesServices {
+    border-radius: 0.5em;
+    width: max-content;
+    padding: 1em;
+    margin: 1em;
+    background-color: var(--secondary-color);
+    flex: content;
+    flex-grow: 1;
+}
+
+.Boxes img {
+    width: 2em;
+    margin: 0.2em;
+}
+
+.Boxes h3,
+.BoxesAbilties h3,
+.BoxesAbilties h6,
+.BoxesServices h3,
+.BoxesServices h5 {
+    color: var(--primary-color);
+}
+
+.Boxes p {
+    color: var(--primary-color);
+    background-color: var(--secondary-color);
+    margin-top: 0.5em;
+}
+
+.secondAboutDiv a {
+    display: inline-block;
+    margin-top: 1em;
+    text-decoration: none;
+}
+
+.BoxesAbilties hr {
+    border: 1px solid var(--primary-color);
+    margin-top: -0.5em;
+}
+
+.BoxesAbilties img {
+    width: 1em;
+    height: 1em;
+    margin: 0.3em;
+}
+
+.BoxesAbilties h4 {
+    color: var(--primary-color);
+    display: inline;
+    margin: 1px;
+}
+
+.smallBoxesAbilties {
+    margin: 1em;
+    flex-grow: 1;
+    direction: ltr;
+}
+
+.BoxesServices h5 {
+    margin: auto;
+    width: fit-content;
+}
+
+.BoxesServices h5:hover {
+    cursor: pointer;
+    transform: translate(-10px);
+}
+
+.BoxesServices {
+    padding: 5% 2.5%;
+}
+
+.dialogBoxesServices {
+    margin: auto;
+    padding: 5%;
+    border: var(--primary-color);
+    border-radius: 1em;
+    background-color: var(--primary-color);
+    animation: slide-in 0.3s ease-in;
+}
+
+.dialogBoxesServices::backdrop {
+    background-color: black;
+    opacity: 0.6;
+    animation: slide-in-Backdrop 0.3s ease-in;
+}
+
+@keyframes slide-in {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes slide-in-Backdrop {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 0.6;
+    }
+}
+
+.Exit {
+    text-align: start;
+    width: fit-content;
+    margin-bottom: 1em;
+    cursor: pointer;
+    margin: 0;
+}
+
+.dialogBoxesServices h5 {
+    text-align: start;
+    margin-bottom: 1em;
+    width: fit-content;
+}
+
+.dialogBoxesServices :nth-child(3) {
+    margin-top: 2em;
+    margin-bottom: 2em;
+}
+
+#footer {
+    margin-top: 1em;
+    margin-bottom: 0em;
+}
+
+.footer {
+    background-color: var(--secondary-color);
+    padding: 1em;
+    bottom: 0;
+}
+
+.footer h3 {
+    cursor: pointer;
+    color: var(--primary-color);
+    width: fit-content;
+    margin: auto;
+}
